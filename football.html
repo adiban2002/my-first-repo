@@ -1,0 +1,75 @@
+<html>
+<head>
+<style>
+h1{
+  text-align: center;
+  color: black;
+  font-size:  30px;
+}
+h2{
+  text-align: center;
+  color: green;
+  font-size:  20px;
+}
+form{
+  border: 20px;
+  margin: 10px;
+  width: 75%;
+  text-align: center;
+  text-decoration: none;
+}
+p{
+  text-align: center;
+  color: blue;
+}
+body{
+  background-image: url("uefa.jpg");
+  background-color: #e8f0ff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:  contain;
+}
+footer{
+  padding: 15px;
+}
+</style>
+</head>
+<h1> UEFA Champions League</h1>
+<h2> Welcome you to The Ultimate Football battle of the World!</h2>
+<form>
+      <label>Name of the User</label><input type="text" id=" Name" placeholder="Enter your name"><br><br>
+      <label>Date-of-Birth</label><input type="date" id=" Dob" placeholder="Enter your date of birth"><br><br>
+      <label>Enter your phone number</label><input type="number" id="PhoneNumber" placeholder="Enter your phone number"><br><br>
+      <button type="button" onclick="displayTeams()">Create</button>
+</form>
+<p id="demo"></p>
+<script type="text/javascript">
+function displayTeams(){
+  const xmlString = `
+    <team_info> 
+      <team><team_name>Real Madrid</team_name><estd_year>1902</estd_year><country>Spain</country></team> 
+      <team><team_name>FC Barcelona</team_name><estd_year>1899</estd_year><country>Spain</country></team>
+      <team><team_name>AC Milan</team_name><estd_year>1899</estd_year><country>Italy</country></team> 
+      <team><team_name>Inter Milan</team_name><estd_year>1899</estd_year><country>Italy</country></team> 
+      <team><team_name>Bayern Munich</team_name><estd_year>1900</estd_year><country>Germany</country></team>
+      <team><team_name>Juventus</team_name><estd_year>1897</estd_year><country>Italy</country></team>
+    </team_info>
+  `;
+  
+  const parser = new DOMParser();
+  const xmlDoc = parser.parseFromString(xmlString, "text/xml");
+  const teams = xmlDoc.getElementsByTagName("team");
+  let output = "<h2>Team Information</h2><ul>";
+  
+  for (let i = 0; i < teams.length; i++) {
+    const teamName = teams[i].getElementsByTagName("team_name")[0].textContent;
+    const estdYear = teams[i].getElementsByTagName("estd_year")[0].textContent;
+    const country = teams[i].getElementsByTagName("country")[0].textContent;
+    output += `<li><b>${teamName}</b> (Est. ${estdYear}) - ${country}</li>`;
+  }
+  
+  output += "</ul>";
+  document.getElementById("demo").innerHTML = output;
+}
+</script>
+
