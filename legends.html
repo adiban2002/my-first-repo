@@ -1,0 +1,150 @@
+<html>
+<head>
+<style>
+h1{
+  text-align: center;
+  font-size: 36px;
+  margin-top: 20px;
+  color: gold;
+  text-shadow: 2px 2px #000;
+}
+h2 {
+  text-align: center;
+  color: #00ff00;
+  font-size: 22px;
+}
+
+body {
+  background-image: url("players.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+form{
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+  width: 50%;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+form input,form button{
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+  border-radius: 6px;
+  border: none;
+}
+form button{
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.legends-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.legend-card {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 15px;
+}
+.legend-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFD700;
+}
+.legend-achievements {
+  margin-top: 10px;
+}
+</style>
+<div class="legends-section">
+  <div class="legend-card">
+    <div class="legend-name">Pele</div>
+    <ul class="legend-achievements">
+      <li>Youngest player to win FIFA World Cup (1958, age 17)</li>
+      <li>Only player to win 3 World Cups (1958, 1962, 1970)</li>
+      <li>Known as the "King of Football"</li>
+    </ul>
+  </div>
+
+  <div class="legend-card">
+    <div class="legend-name">Diego Maradona</div>
+    <ul class="legend-achievements">
+      <li>Hero of 1986 World Cup</li>
+      <li>Scored the "Goal of the Century"</li>
+      <li>Known as the "God of Football"</li>
+    </ul>
+  </div>
+
+  <div class="legend-card">
+    <div class="legend-name">Lionel Messi</div>
+    <ul class="legend-achievements">
+      <li>Most Ballon d'Or wins</li>
+      <li>Most football trophies won</li>
+      <li>Won FIFA World Cup 2022</li>
+    </ul>
+  </div>
+  
+  <div class="legend-card">
+    <div class="legend-name">Cristiano Ronaldo</div>
+    <ul class="legend-achievements">
+      <li>Scored most number of goals in football history</li>
+      <li>Won Ballon d-or 5 times</li>
+      <li>Won 5 UCL</li>
+    </ul>
+  </div>
+  <div class="legend-card">
+    <div class="legend-name">Alfredo Di Stefano</div>
+    <ul class="legend-achievements">
+      <li>Known as the First Superstar of Football</li>
+      <li>First player to win back-to-back 5 UCL and helped Real Madrid to establish as a global giant in fotball</li>
+      <li>Won only Super Ballon d-or(1989)</li>
+    </ul>
+  </div>
+  <div class="legend-card">
+    <div class="legend-name">Johan Cruyff</div>
+    <ul class="legend-achievements">
+      <li>Known as the "Father of 'Total-Football'" Phylospy</li>
+      <li>Help to convert Barcelona into a legendary club</li>
+      <li>FIFA WORLD CUP 1974 Runners-up</li>
+    </ul>
+  </div>
+</div>
+
+</style>
+</head>
+<body>
+<h1>Welcome to the World of Football Legends!</h1>
+<h2>Top 6 Greatest Footballers of all time along with their achievements</h2>
+<form>
+      <label>Name of the User</label><input type="text" id=" Name" placeholder="Enter your name"><br><br>
+      <label>Date-of-Birth</label><input type="date" id=" Dob" placeholder="Enter your date of birth"><br><br>
+      <label>Enter your phone number</label><input type="number" id="PhoneNumber" placeholder="Enter your phone number"><br><br>
+      <button type="button" onclick="displayPlayers()">Create</button>
+</form>
+<p id="demo"></p>
+<script type="text/javascript">
+let Name=prompt("Enter your name:");
+let Dob=prompt("Enter your date of birth:");
+let PhoneNumber=prompt("Enter your phone number:");
+let output=" ";
+let resultDiv = document.createElement("div");
+resultDiv.innerHTML = output;
+document.body.appendChild(resultDiv);
+let button = document.createElement("button");
+button.innerText = "Create";
+button.onclick = displayPlayers()
+{
+   alert("Button clicked!");
+};
+document.body.appendChild(button);
+</script>
+</body>
+</html>
