@@ -1,0 +1,86 @@
+<html>
+<head>
+<style>
+h1{
+  text-align: center;
+  color: black;
+  font-size:  30px;
+}
+h2{
+  text-align: center;
+  color: green;
+  font-size:  20px;
+}
+form{
+  border: 20px;
+  margin: 10px;
+  width: 75%;
+  text-align: center;
+  text-decoration: none;
+}
+p{
+  text-align: center;
+  color: blue;
+}
+ul{
+  list-style-type: disc;
+}
+body{
+  background-image: url("image.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:  contain;
+}
+footer{
+  padding: 15px;
+}
+</style>
+</head>
+<body>
+<h1> JEE ADVANCED 2026 </h1>
+<h2> Application Form of JEE ADVANCED 2026 </h2>
+<form>
+<br><label>Name of the candidate</label><input type="text" id=" Name" placeholder="Enter your name"></br>
+<br><label>Date-of-Birth</label><input type="date" id=" Dob" placeholder="Enter your date of birth"></br>
+<br><label>Application Number</label><input type="string" id="ApplicationNumber" placeholder="Enter your application number"></br>
+<br><label>Address of The Candidate</label><input type="address" id="AddressOfCandidate" placeholder="Enter your address"></br>
+<br><label>Exam Centre </label><input type="text" id="ExamCentre" placeholder="Enter your exam center"></br>
+<br><label>City</label><input type="text" id=" City" placeholder="Enter your city name of exam"></br>
+<br><label>Date Of Exam</label><input type="date" id="Doe" placeholder="Enter the  date of exam"></br>
+<br><label>Timing of the Exam of Shift 1</label><input type="time" id="Toe" placeholder="Enter the timing of exam"></br>
+<br><label>Timing of the Exam of Shift 2</label><input type="time" id="Toe" placeholder="Enter the timing of exam"></br>
+<br><label>Reporting Time in the Exam Center</label><input type="time" id="RToe" placeholder="Enter the reporting time in the exam center"></br>
+<br><button onclick="function()">Create</button></br>
+</form>
+<p>Instructions for the Exam</p>
+<ul>
+  <li> Candidates who appeared in 12th class board exam on 2025 or 2025,will be allowed to give the JEE ADVANCED 2026.</li>
+  <li> Candidates who appeared in 12th class board exam on or before 2024,will not be allowed to give the JEE ADVANCED 2026.</li>
+  <li> Candidates must reach to their respective exam center within the reporting time.</li>
+  <li> Candidates should not carry any electronic devices like mobile,calculator and any cheat sheets in the examination.</li>
+</ul>
+<script language="javascript" type="text/javascript">
+let Name=prompt("Enter your name:");
+let Dob=prompt("Enter your date of birth:");
+let ApplicationNumber=prompt("Enter your application number:");
+let AddressOfCandidate=prompt("Enter your address:");
+let ExamCentre=prompt("Enter your exam center:");
+let City=prompt("Enter your city name of exam:");
+let Doe=prompt("Enter the  date of exam:");
+let Toef=prompt("Enter the timing of exam of Shift 1:");
+let Toes=prompt("Enter the timing of exam of Shift 2:");
+let RToe=prompt("Enter the reporting time in the exam center:");
+let output=" ";
+let resultDiv = document.createElement("div");
+resultDiv.innerHTML = output;
+document.body.appendChild(resultDiv);
+let button = document.createElement("button");
+button.innerText = "Create";
+button.onclick = function () 
+{
+   alert("Button clicked!");
+};
+document.body.appendChild(button);
+</script>
+</body>
+</html>
