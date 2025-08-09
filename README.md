@@ -14,4 +14,17 @@ Java Programs
 - [QuickSort.java](./QuickSort.java)
 - [SinglyLinkedList.java](./SinglyLinkedList.java)
 - [TreeOrder.java](./TreeOrder.java)
-  
+# CI/CD Speed Simulator
+
+This project simulates build times for CI/CD pipelines with optional caching.  
+You can specify a build time or let the program choose a random time.
+
+## Features
+- Random or manual build time
+- Optional build cache simulation (40% faster)
+- Build logs saved to `build_log.txt`
+
+## How to Run
+```bash
+python3 main.py
+ 
